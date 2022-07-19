@@ -48,7 +48,7 @@ class ProdukController extends Controller
         
             $produk = new Produk;
             $produk->nama_produk = $request->nama_produk;
-            $produk->id_kategori = $request->id_kategori;
+            $produk->kategori_id = $request->kategori_id;
             $produk->harga = $request->harga;
             $produk->deskripsi = $request->deskripsi;
 
@@ -103,7 +103,7 @@ class ProdukController extends Controller
         $produk = Produk::find($id);
         if ($request->has('gambar')) {
             $produk->nama_produk = $request->get('nama_produk');
-        $data_kategori = KategoriProduk::find($request->get('id_kategori'));
+        $data_kategori = KategoriProduk::find($request->get('kategori_id'));
         $produk->kategori()->associate($data_kategori);
         $produk->harga = $request->get('harga');
         $produk->deskripsi = $request->get('deskripsi');
@@ -116,7 +116,7 @@ class ProdukController extends Controller
         
         }else{
             $produk->nama_produk = $request->get('nama_produk');
-            $data_kategori = KategoriProduk::find($request->get('id_kategori'));
+            $data_kategori = KategoriProduk::find($request->get('kategori_id'));
             $produk->kategori()->associate($data_kategori);
             $produk->harga = $request->get('harga');
             $produk->deskripsi = $request->get('deskripsi');

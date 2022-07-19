@@ -35,7 +35,7 @@
         <div class="form-outline mb-3 col-md-6">
                     <select name="id_kategori" id="id_kategori" class="form-control form-control-lg input-sm" >
         @foreach ($data_kategori as $kategori)
-            <option value="{{$kategori->kategori_id}} ">{{$kategori->nama_kategori}} </option>
+            <option value="{{$kategori->kategori_id}} ">{{$kategori->kategori_id}} </option>
         @endforeach
 
             </select>

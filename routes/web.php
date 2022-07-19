@@ -21,8 +21,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [ProdukController::class, 'index'])->name('produk');
+Route::get('/', [App\Http\Controllers\ProdukController::class, 'index'])->name('home');
+Route::get('/home', [ProdukController::class, 'index'])->name('home');
 Route::resource('/kategori', KategoriProdukController::class);
 Route::resource('/produk', ProdukController::class);
 Route::get('logout', function(){
