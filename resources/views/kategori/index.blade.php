@@ -12,12 +12,12 @@
         @endif
 
         <div class="row">
-            <div class="col">
-                <a class="btn btn-primary" href="{{route('kategori.create')}} " >Tambah Data</a>
+            <div class="col-sm-1">
+                <a class="btn btn-primary" href="{{route('kategori.create')}} " >Tambah</a>
             </div>
 
 
-            <div class="col-8">
+            <div class="col-md-6">
                 <a class="btn btn-primary"  href="{{route('produk.index')}} ">Produk</a>
             </div>
             <div class="col-sm">

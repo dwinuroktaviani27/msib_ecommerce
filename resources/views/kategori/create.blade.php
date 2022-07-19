@@ -2,8 +2,8 @@
 
 @section('content')
     
-<div class="container">
-    <h2>Membuat Kategori Baru</h2>
+<div class="container card">
+    <h2>Tambah Kategori</h2>
     @if ($errors->any())
 
     <div class="alert alert-danger">
@@ -30,22 +30,21 @@
     <form action="{{url('kategori')}}" method="post" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="form-group col-md-4">
-            <label for="nama_kategori">Nama Kategori :</label>
-            <input type="text" name="nama_kategori" class="form-control">
+
+        <div class="row justify-content-center">
+            <div class="form-outline mb-3 col-md-6">
+                <input type="text" name="nama_kategori" class="form-control form-control-lg" placeholder="Nama Kategori">
+            </div>
         </div>
-    </div>
 
     
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="form-group col-md-3">
+    <div class="row justify-content-center">
+        <div class="form-group col-md-1">
             <button class="btn btn-success" type="submit">
-                Tambah Data
+                Tambah
             </button>
         </div>
-        <div class="form-group col-md-2">
+        <div class="form-group col-sm-5">
             <a href="{{URL::previous()}} " class="btn btn-primary">
             Cancel
             </a>

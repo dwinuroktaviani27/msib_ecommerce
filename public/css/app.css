@@ -1,0 +1,16 @@
+h2 {
+    text-align:center;
+    display: block;
+    font-size: 2em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    padding-top:65px;
+}
+.card{
+    padding-bottom:25px;
+    width:50%;
+    margin-top:125px;
+}

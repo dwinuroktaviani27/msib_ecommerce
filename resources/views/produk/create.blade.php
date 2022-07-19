@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container card">
     <h2>Tambahkan Data Produk </h2>
 
     @if ($errors->any())
@@ -25,20 +25,15 @@
     
     {{ csrf_field() }}
 
-    <div class="row">
-        <div class="col-md-6"></div>
-        <div class="form-group col-md-6">
-            <label for="nama_produk"> Nama Poduk :</label>
-            <input type="text" name="nama_produk" class="form-control">
+    <div class="row justify-content-center">
+        <div class="form-outline mb-3 col-md-6">
+            <input type="text" name="nama_produk" class="form-control form-control-lg" placeholder="Nama Produk">
         </div>
     </div>
     
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="form-group col-md-4">
-            <label for="id_kategori">Kategori : </label>
-
-                    <select name="id_kategori" id="id_kategori" class="form-control input-sm">
+    <div class="row justify-content-center">
+        <div class="form-outline mb-3 col-md-6">
+                    <select name="id_kategori" id="id_kategori" class="form-control form-control-lg input-sm" >
         @foreach ($data_kategori as $kategori)
             <option value="{{$kategori->kategori_id}} ">{{$kategori->nama_kategori}} </option>
         @endforeach
@@ -46,37 +41,29 @@
             </select>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="form-group col-md-4">
-            <label for="harga">Harga : </label>
-            <input type="text" name="harga"class="form-control">
+    <div class="row justify-content-center">
+        <div class="form-outline mb-4 col-md-6">
+            <input type="text" name="harga"class="form-control form-control-lg" placeholder="Harga">
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="form-group col-md-4">
-            <label for="deskripsi">Deskripsi : </label>
-            <textarea name="deskripsi"  cols="30" rows="10" class="form-control">
-
+    <div class="row justify-content-center">
+        <div class="form-outline mb-4 col-md-6">
+            <textarea name="deskripsi"  cols="30" rows="10" class="form-control form-control-lg" placeholder="Deskripsi">
             </textarea>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="form-group col-md-4">
-            <label for="gambar">gambar : </label>
-            <input type="file" name="gambar" class="form-control">
+    <div class="row justify-content-center">
+        <div class="form-outline mb-4 col-md-6">
+            <input type="file" name="gambar" class="form-control form-control-lg">
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="form-group col-md-3">
+    <div class="row justify-content-center">
+        <div class="form-group col-md-1 ">
             <button type="submit" class="btn btn-success">
-                Simpan Produk
+                Simpan
             </button>
         </div>
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-5">
             <a class="btn btn-primary" href="{{ URL::previous() }} ">Cancel</a>
         </div>
     </div>
